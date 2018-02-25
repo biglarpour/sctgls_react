@@ -48,7 +48,8 @@
   },
   "scripts": {
     "dev": "webpack -d --progress --watch --profile --json > compilation-stats.json --env.dev",
-    "start": "webpack-dev-server --progress --color --inline --env.dev",
+    "dev-webpack": "webpack-dev-server --progress --color --inline --env.dev",
+    "start": "npm run build && NODE_ENV=production",
     "build": "webpack -p --progress --env.prod",
     "clean": "rimraf ./build"
   },
